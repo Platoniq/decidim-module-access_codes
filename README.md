@@ -1,7 +1,8 @@
 # Decidim::AccessCodes
 
-[![Build Status](https://travis-ci.com/Platoniq/decidim-module-access_codes.svg?branch=master)](https://travis-ci.com/Platoniq/decidim-module-access_codes)
+[![[CI] Test](https://github.com/Platoniq/decidim-module-access_codes/actions/workflows/test.yml/badge.svg)](https://github.com/Platoniq/decidim-module-access_codes/actions/workflows/test.yml)
 [![codecov](https://codecov.io/gh/Platoniq/decidim-module-access_codes/branch/master/graph/badge.svg)](https://codecov.io/gh/Platoniq/decidim-module-access_codes)
+[![Maintainability](https://api.codeclimate.com/v1/badges/9c1e9246a4b12af400e3/maintainability)](https://codeclimate.com/github/Platoniq/decidim-module-access_codes/maintainability)
 
 The gem has been developed by [Platoniq](https://github.com/Platoniq/).
 
@@ -28,14 +29,27 @@ The access code workflow works as follows:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "decidim-access_codes"
+gem "decidim-access_codes", git: "https://github.com/Platoniq/decidim-module-access_codes",
 ```
 
 And then execute:
 
 ```bash
 bundle
+bundle exec rake decidim_access_codes_verification:install:migrations
 rails db:migrate
+```
+
+Finally, enable the verification method by creating an initializer, for instance in the file `config/initializers/access_codes_verification.rb`:
+
+```ruby
+# frozen_string_literal: true
+
+Decidim::Verifications.register_workflow(:access_codes) do |workflow|
+  workflow.engine = Decidim::AccessCodes::Verification::Engine
+  workflow.admin_engine = Decidim::AccessCodes::Verification::AdminEngine
+end
+
 ```
 
 ## Usage
