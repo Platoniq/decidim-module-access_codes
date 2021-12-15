@@ -2,12 +2,12 @@ ca:
   activemodel:
     attributes:
       authorization:
-        code: Code
+        code: Codi
   decidim:
     access_codes:
       access_code_mailer:
         send_code:
-          footer: Thank you!
+          footer: Gràcies!
           greeting: Hola! Heu rebut un codi d'accés per verificar-vos a %{organization_name}
           instructions_1: El vostre codi d'accés és
           instructions_2: Si us plau, introduiu el codi d'accés clicant el següent enllaç.
@@ -53,8 +53,8 @@ ca:
               users: Usuàries verificades amb aquest codi
           authorizations:
             destroy:
-              error: There was an error deleting the verification.
-              success: Authorization was deleted successfully.
+              error: Hi ha hagut un error eliminant la verificació.
+              success: La verificació ha estat eliminada.
         authorizations:
           create:
             error: El codi d'accés no és vàlid.
