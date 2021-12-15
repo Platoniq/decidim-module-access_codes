@@ -7,6 +7,9 @@ Rails/ActionFilter:
   Include:
     - app/controllers/**/*.rb
 
+Rails/ContentTag:
+  Enabled: false
+
 Rails/CreateTableWithTimestamps:
   Enabled: false
 
@@ -54,8 +57,15 @@ Rails/Output:
     - config/**/*.rb
     - db/**/*.rb
     - lib/**/*.rb
-
+  Exclude:
+    - db/seeds.rb
 Rails/OutputSafety:
+  Enabled: false
+
+Rails/Pluck:
+  Enabled: false
+
+Rails/RakeEnvironment:
   Enabled: false
 
 Rails/ReadWriteAttribute:
