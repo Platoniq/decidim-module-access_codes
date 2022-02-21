@@ -15,9 +15,8 @@ module Decidim
           root to: "authorizations#new"
         end
 
-        initializer "decidim_access_codes.assets" do |app|
-          app.config.assets.precompile += %w(decidim_access_codes_manifest.css
-                                             decidim/access_codes/verification.scss)
+        initializer "decidim_notify.webpacker.assets_path" do
+          Decidim.register_assets_path File.expand_path("app/packs", root)
         end
 
         def load_seed

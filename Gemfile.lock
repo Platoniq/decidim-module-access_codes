@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    decidim-access_codes (0.3)
+    decidim-access_codes (0.25)
       decidim-admin (~> 0.25.2)
       decidim-core (~> 0.25.2)
       decidim-verifications (~> 0.25.2)
