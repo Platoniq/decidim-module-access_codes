@@ -64,6 +64,9 @@ ca:
             instructions: Si us plau, introduiu el codi d'accés que heu rebut per correu electrònic. Si no el podeu trobar a la bústia d'entrada, reviseu la carpeta de correus no desitjats.
             send: Enviar
             title: Introduiu el codi d'accés
+    authorization_handlers:
+      access_codes:
+        name: Access codes
     verifications:
       authorizations:
         first_login:
