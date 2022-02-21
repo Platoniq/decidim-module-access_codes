@@ -7,7 +7,7 @@ require "decidim/access_codes/version"
 Gem::Specification.new do |s|
   s.version = Decidim::AccessCodes::VERSION
   s.authors = ["Vera Rojman"]
-  s.email = ["vera@platoniq.net"]
+  s.email = ["vera@platoniq.net", "ivan@platoniq.net"]
   s.license = "AGPL-3.0"
   s.homepage = "https://github.com/Platoniq/decidim-module-access_codes"
   s.required_ruby_version = ">= 2.7"
