@@ -5,6 +5,9 @@ es:
       authorization:
         code: Código
   decidim:
+    authorization_handlers:
+      access_codes:
+        name: Códigos de acceso
     access_codes:
       access_code_mailer:
         send_code:

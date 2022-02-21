@@ -5,6 +5,9 @@ ca:
       authorization:
         code: Codi
   decidim:
+    authorization_handlers:
+      access_codes:
+        name: Codis d'accés
     access_codes:
       access_code_mailer:
         send_code:

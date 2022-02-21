@@ -69,6 +69,9 @@ en:
               If you cannot find the email in your inbox, check your spam folder.
             send: Submit
             title: Enter the access code
+    authorization_handlers:
+      access_codes:
+        name: Access codes
     verifications:
       authorizations:
         first_login:
