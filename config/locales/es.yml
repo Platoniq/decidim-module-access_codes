@@ -64,6 +64,9 @@ es:
             instructions: Por favor, introduzca el código de acceso que ha recibido por correo electrónico. Si no lo puede encontrar en la bandeja de entrada, revise la carpeta de correos no deseados.
             send: Enviar
             title: Introduzca el código de acceso
+    authorization_handlers:
+      access_codes:
+        name: Access codes
     verifications:
       authorizations:
         first_login:
