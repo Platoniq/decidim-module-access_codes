@@ -29,7 +29,7 @@ The access code workflow works as follows:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "decidim-access_codes", git: "https://github.com/Platoniq/decidim-module-access_codes",
+gem "decidim-access_codes", git: "https://github.com/Platoniq/decidim-module-access_codes"
 ```
 
 And then execute:
