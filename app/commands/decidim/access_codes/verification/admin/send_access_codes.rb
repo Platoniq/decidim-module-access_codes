@@ -5,7 +5,7 @@ module Decidim
     module Verification
       module Admin
         # ...
-        class SendAccessCodes < Rectify::Command
+        class SendAccessCodes < Decidim::Command
           SEPARATOR = ";"
 
           # Public: Initializes the command.

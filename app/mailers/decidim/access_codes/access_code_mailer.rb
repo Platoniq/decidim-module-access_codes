@@ -6,7 +6,7 @@ module Decidim
     class AccessCodeMailer < Decidim::ApplicationMailer
       include Decidim::TranslatableAttributes
 
-      add_template_helper Decidim::TranslatableAttributes
+      helper Decidim::TranslatableAttributes
 
       # Public: Sends a notification email with an access code for user verification
       #

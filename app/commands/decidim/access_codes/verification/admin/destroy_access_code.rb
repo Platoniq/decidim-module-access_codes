@@ -5,7 +5,7 @@ module Decidim
     module Verification
       module Admin
         # A command to destroy an access_code.
-        class DestroyAccessCode < Rectify::Command
+        class DestroyAccessCode < Decidim::Command
           # Public: Initializes the command.
           #
           # access_code - The access_code object to destroy.

@@ -7,10 +7,10 @@ require "decidim/access_codes/version"
 Gem::Specification.new do |s|
   s.version = Decidim::AccessCodes::VERSION
   s.authors = ["Vera Rojman"]
-  s.email = ["vera@platoniq.net", "ivan@platoniq.net"]
+  s.email = %w(vera@platoniq.net ivan@platoniq.net)
   s.license = "AGPL-3.0"
   s.homepage = "https://github.com/Platoniq/decidim-module-access_codes"
-  s.required_ruby_version = ">= 2.7"
+  s.required_ruby_version = ">= 3.0"
 
   s.name = "decidim-access_codes"
   s.summary = "Allows admins to send access codes for user authorizations."
@@ -30,4 +30,5 @@ Gem::Specification.new do |s|
   s.add_dependency "decidim-verifications", Decidim::AccessCodes::DECIDIM_VERSION
 
   s.add_development_dependency "decidim-dev", Decidim::AccessCodes::DECIDIM_VERSION
+  s.metadata["rubygems_mfa_required"] = "true"
 end

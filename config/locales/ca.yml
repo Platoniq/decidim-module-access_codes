@@ -8,6 +8,7 @@ ca:
     authorization_handlers:
       access_codes:
         name: Codis d'accés
+        explanation: Verifiqueu-vos introduint un codi d'accés
     access_codes:
       access_code_mailer:
         send_code:

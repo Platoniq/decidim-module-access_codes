@@ -10,14 +10,20 @@
 # rspec failure tracking
 .rspec-failures
 
-# rbenv environment variables
-.rbenv-vars
-
 # default test application
 spec/decidim_dummy_app
 
 # default development application
 development_app
+/development_app
 
-# byebug history
-.byebug-history
+.rbenv-vars
+.vscode
+.byebug_history
+*.gem
+node_modules/
+npm_debug.log
+
+.ruby-version
+.idea/
+.rubocop-*

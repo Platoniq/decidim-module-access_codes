@@ -72,6 +72,7 @@ en:
     authorization_handlers:
       access_codes:
         name: Access codes
+        explanation: Get verified by entering an access code
     verifications:
       authorizations:
         first_login:
