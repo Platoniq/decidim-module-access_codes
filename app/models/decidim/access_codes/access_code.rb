@@ -34,7 +34,11 @@ module Decidim
       end
 
       def authorizations
-        Decidim::Authorization.where(name: "access_codes").where("metadata->>'access_code_id' = '?'", id)
+        auths = []
+        Decidim::Authorization.find_each do |auth|
+          auths << auth if auth.metadata["access_code_id"] == id
+        end
+        auths
       end
 
       private
