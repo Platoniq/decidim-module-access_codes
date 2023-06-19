@@ -10,8 +10,7 @@ module Decidim
 
       before_save :generate, :set_maximum_uses
 
-      validates :organization, presence: true
-      validates :email, presence: true, 'valid_email_2/email': { disposable: true }
+      validates :email, presence: true, "valid_email_2/email": { disposable: true }
       validates :code, uniqueness: { scope: :decidim_organization_id }, if: -> { code.present? }
 
       before_destroy :destroy_authorizations
