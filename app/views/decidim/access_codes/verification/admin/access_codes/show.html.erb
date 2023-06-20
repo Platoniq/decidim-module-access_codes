@@ -43,7 +43,7 @@
         </tr>
       </thead>
       <tbody>
-        <% authorizations.each do |authorization| %>
+        <% paginated_authorizations.each do |authorization| %>
           <tr>
             <td>
               <% if authorization.user.deleted? %>
@@ -80,6 +80,6 @@
         <% end %>
       </tbody>
     </table>
-    <%= paginate access_codes, theme: "decidim" %>
+    <%= paginate paginated_authorizations, theme: "decidim" %>
   </div>
 </div>

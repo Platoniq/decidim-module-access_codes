@@ -5,7 +5,7 @@ module Decidim
     module Verification
       module Admin
         class AccessCodesController < Decidim::Admin::ApplicationController
-          helper_method :access_code, :access_codes, :authorizations
+          helper_method :access_code, :access_codes, :authorizations, :paginated_authorizations
           delegate :authorizations, to: :access_code
 
           def index
@@ -64,6 +64,10 @@ module Decidim
 
           def access_codes
             @access_codes ||= AccessCode.where(organization: current_organization).page(params[:page]).per(15)
+          end
+
+          def paginated_authorizations
+            @paginated_authorizations ||= Decidim::Authorization.where(id: authorizations.map(&:id)).page(params[:page]).per(15)
           end
         end
       end
