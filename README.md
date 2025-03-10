@@ -1,7 +1,7 @@
 # Decidim::AccessCodes
 
 [![[CI] Test](https://github.com/Platoniq/decidim-module-access_codes/actions/workflows/test.yml/badge.svg)](https://github.com/Platoniq/decidim-module-access_codes/actions/workflows/test.yml)
-[![codecov](https://codecov.io/gh/Platoniq/decidim-module-access_codes/branch/main/graph/badge.svg?token=DtR8J7AOav)](https://codecov.io/gh/Platoniq/decidim-module-access_codes)
+[![Coverage Status](https://coveralls.io/repos/github/Platoniq/decidim-module-access_codes/badge.svg?branch=main)](https://coveralls.io/github/Platoniq/decidim-module-access_codes?branch=main)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9c1e9246a4b12af400e3/maintainability)](https://codeclimate.com/github/Platoniq/decidim-module-access_codes/maintainability)
 
 The gem has been developed by [Platoniq](https://github.com/Platoniq/).
