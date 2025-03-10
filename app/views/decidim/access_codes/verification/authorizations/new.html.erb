@@ -1,28 +1,24 @@
-<div class="wrapper">
-  <div class="row">
-    <div class="row">
-      <div class="columns large-8 large-centered text-center page-title">
-        <h1><%= t(".title") %></h1>
-      </div>
-      <div class="columns large-4 medium-centered mb-s text-justify">
+<section class="home__section flex items-center justify-center">
+  <div class="max-w-96">
+    <h1 class="h1"><%= t(".title") %></h1>
+    <div class="item_show__wrapper pt-8">
+      <div class="text-justify">
         <%== t(".instructions") %>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="columns large-4 medium-centered">
-        <%= decidim_form_for(@form, url: authorization_path) do |form| %>
+      <div class="form__wrapper">
+        <%= decidim_form_for(@form, html: { class: "form-defaults form" }, url: authorization_path) do |form| %>
           <%= form.hidden_field :handler_handle %>
 
           <%= form.text_field :code %>
 
-          <div class="actions">
-            <%= form.submit t(".send"), class: "button expanded", "data-disable-with" => "#{t('.send')}..." %>
+          <div class="actions pt-8">
+            <%= form.submit t(".send"), class: "button button__sm button__secondary w-96", "data-disable-with" => "#{t('.send')}..." %>
           </div>
         <% end %>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <%= stylesheet_link_tag "decidim/access_codes/verification" %>

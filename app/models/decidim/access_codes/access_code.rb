@@ -39,7 +39,7 @@ module Decidim
       private
 
       def destroy_authorizations
-        authorizations.destroy_all
+        authorizations.each(&:destroy)
       end
 
       def generate

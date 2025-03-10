@@ -70,6 +70,11 @@ en:
             send: Submit
             title: Enter the access code
     authorization_handlers:
+      admin:
+        access_codes:
+          help: 
+            - An admin enters a list of emails and an access code is sent to each of these emails.
+            - Users that receive the email can enter the acces code to get verified.
       access_codes:
         name: Access codes
         explanation: Get verified by entering an access code

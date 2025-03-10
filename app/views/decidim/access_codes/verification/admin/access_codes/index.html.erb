@@ -1,11 +1,11 @@
 <div class="card">
-  <div class="card-divider">
-    <h2 class="card-title">
+  <div class="item_show__header">
+    <h1 class="item_show__header-title">
       <%= t(".title") %>
-      <%= link_to t("actions.new", scope: "decidim.access_codes.verification.admin.access_codes"), new_access_code_path, class: "button tiny button--title" %>
-    </h2>
+      <%= link_to t("actions.new", scope: "decidim.access_codes.verification.admin.access_codes"), new_access_code_path, class: "button button__sm button__secondary" %>
+    </h1>
   </div>
-  <div class="card-section">
+  <div class="table-scroll">
     <table class="table-list">
       <thead>
         <tr>
@@ -22,11 +22,11 @@
           <tr>
             <%= render partial: "decidim/access_codes/verification/admin/access_codes/access_code", locals: { access_code: access_code } %>
             <td class="table-list__actions">
-              <%= icon_link_to "person",
+              <%= icon_link_to "group-line",
                               access_code_path(access_code.id),
                               t(".users"),
                               class: "action-icon--users" %>
-              <%= icon_link_to "circle-x",
+              <%= icon_link_to "close-circle-line",
                               access_code_path(access_code.id),
                               t(".remove_access"),
                               method: :delete,

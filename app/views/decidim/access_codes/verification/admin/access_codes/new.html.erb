@@ -1,30 +1,37 @@
-<div class="card" id='access-code'>
-  <div class="card-divider">
-    <h2 class="card-title"><%= t(".title") %></h2>
-    <%= link_to t("actions.all", scope: "decidim.access_codes.verification.admin.access_codes"), access_codes_path, class: "button tiny button--title" %>
-  </div>
-  <div class="card-section">
+<div class="item_show__wrapper">
+  <div class="card" id='access-code'>
+    <div class="item_show__header">
+      <h1 class="item_show__header-title">
+        <%= t(".title") %>
+        <%= link_to t("actions.all", scope: "decidim.access_codes.verification.admin.access_codes"), access_codes_path, class: "button button__sm button__secondary" %>
+      </h1>
+    </div>
+    <div class="item__edit-form">
+      <div class="card-section">
+        <div class="form__wrapper">
+          <%= decidim_form_for(@form, html: { class: "form-defaults form new_access_code" }) do |form| %>
+            <p class="row column text-help pb-2">
+              <%= t(".instructions") %>
+            </p>
 
-    <%= decidim_form_for(@form, html: { class: "form new_access_code" }) do |form| %>
-      <p class="text-help">
-        <%= t(".instructions") %>
-      </p>
+            <div class="row column panel callout">
+              <%= raw t(".example") %>
+            </div>
 
-      <div class="panel callout mb-s">
-        <%= raw t(".example") %>
+            <p class="row column text-help pb-2">
+              <%= t(".help", maximum_use_count: Decidim::AccessCodes.config.default_maximum_use_count) %>
+            </p>
+
+            <div class="row column">
+              <%= form.text_area :data, rows: 10 %>
+            </div>
+
+            <div class="button button__sm button__secondary">
+                <%= form.submit t(".create") %>
+            </div>
+          <% end %>
+        </div>
       </div>
-
-      <p class="text-help">
-        <%= t(".help", maximum_use_count: Decidim::AccessCodes.config.default_maximum_use_count) %>
-      </p>
-
-      <div class="row column">
-        <%= form.text_area :data, rows: 10 %>
-      </div>
-
-      <div class="button--double form-general-submit">
-          <%= form.submit t(".create") %>
-      </div>
-    <% end %>
+    </div>
   </div>
 </div>
