@@ -39,9 +39,9 @@ module Decidim
             name, email = data_line.split(SEPARATOR).map(&:strip)
 
             access_code = Decidim::AccessCodes::AccessCode.create!(
-              organization: organization,
-              name: name,
-              email: email
+              organization:,
+              name:,
+              email:
             )
 
             Decidim::AccessCodes::AccessCodeMailer.send_code(access_code).deliver_later

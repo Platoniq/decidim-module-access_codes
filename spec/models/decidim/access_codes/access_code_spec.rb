@@ -7,7 +7,7 @@ module Decidim::AccessCodes
     subject { access_code }
 
     let(:organization) { create(:organization) }
-    let(:access_code) { create(:access_code, organization: organization) }
+    let(:access_code) { create(:access_code, organization:) }
 
     it { is_expected.to be_valid }
 

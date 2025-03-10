@@ -25,7 +25,7 @@ module Decidim
           def create
             enforce_permission_to :create, :authorization
 
-            @form = AccessCodeForm.from_params(params).with_context(current_organization: current_organization)
+            @form = AccessCodeForm.from_params(params).with_context(current_organization:)
 
             Decidim::AccessCodes::Verification::Admin::SendAccessCodes.call(@form) do
               on(:ok) do

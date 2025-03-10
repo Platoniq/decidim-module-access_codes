@@ -14,15 +14,15 @@ module Decidim
 
         let(:verification_type) { "ac_verification" }
         let(:handler_handle) { verification_type }
-        let(:access_code) { create(:access_code, maximum_uses: maximum_uses, times_used: times_used, organization: organization) }
+        let(:access_code) { create(:access_code, maximum_uses:, times_used:, organization:) }
         let(:times_used) { 0 }
         let(:maximum_uses) { 0 }
         let(:code) { access_code.code }
 
         let(:params) do
           {
-            handler_handle: handler_handle,
-            code: code
+            handler_handle:,
+            code:
           }
         end
 

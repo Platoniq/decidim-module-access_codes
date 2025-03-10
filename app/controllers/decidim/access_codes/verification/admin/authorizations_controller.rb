@@ -6,7 +6,7 @@ module Decidim
       module Admin
         class AuthorizationsController < Decidim::Admin::ApplicationController
           def destroy
-            enforce_permission_to :destroy, :authorization, authorization: authorization
+            enforce_permission_to(:destroy, :authorization, authorization:)
 
             access_code_id = authorization.metadata["access_code_id"]
 

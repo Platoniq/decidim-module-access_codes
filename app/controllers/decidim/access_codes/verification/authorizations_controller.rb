@@ -11,21 +11,21 @@ module Decidim
         before_action :authorization
 
         def new
-          enforce_permission_to :create, :authorization, authorization: authorization
+          enforce_permission_to(:create, :authorization, authorization:)
 
-          @form = AuthorizationForm.new(handler_handle: "access_codes").with_context(current_organization: current_organization)
+          @form = AuthorizationForm.new(handler_handle: "access_codes").with_context(current_organization:)
         end
 
         def edit
-          enforce_permission_to :create, :authorization, authorization: authorization
+          enforce_permission_to :create, :authorization, authorization:
         end
 
         def create
-          enforce_permission_to :create, :authorization, authorization: authorization
+          enforce_permission_to(:create, :authorization, authorization:)
 
           @form = AuthorizationForm.from_params(
             params.merge(user: current_user)
-          ).with_context(current_organization: current_organization)
+          ).with_context(current_organization:)
 
           Decidim::AccessCodes::Verification::ConfirmUserAuthorization.call(authorization, @form, session) do
             on(:ok) do

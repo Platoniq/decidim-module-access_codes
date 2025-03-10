@@ -27,7 +27,7 @@ module Decidim
         end
 
         def access_code
-          Decidim::AccessCodes::AccessCode.find_by(organization: current_organization, code: code)
+          Decidim::AccessCodes::AccessCode.find_by(organization: current_organization, code:)
         end
 
         private
