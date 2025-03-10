@@ -22,15 +22,8 @@
           <tr>
             <%= render partial: "decidim/access_codes/verification/admin/access_codes/access_code", locals: { access_code: access_code } %>
             <td class="table-list__actions">
-              <%= icon_link_to "group-line",
-                              access_code_path(access_code.id),
-                              t(".users"),
-                              class: "action-icon--users" %>
-              <%= icon_link_to "close-circle-line",
-                              access_code_path(access_code.id),
-                              t(".remove_access"),
-                              method: :delete,
-                              class: "action-icon--delete" %>
+              <%= icon_link_to "group-line", access_code_path(access_code.id), t(".users"), class: "action-icon--users" %>
+              <%= icon_link_to "close-circle-line", access_code_path(access_code.id), t(".remove_access"), method: :delete, class: "action-icon--delete" %>
             </td>
           </tr>
         <% end %>

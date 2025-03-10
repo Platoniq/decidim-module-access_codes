@@ -16,6 +16,10 @@ module Decidim
           @form = AuthorizationForm.new(handler_handle: "access_codes").with_context(current_organization: current_organization)
         end
 
+        def edit
+          enforce_permission_to :create, :authorization, authorization: authorization
+        end
+
         def create
           enforce_permission_to :create, :authorization, authorization: authorization
 
@@ -34,10 +38,6 @@ module Decidim
               render :new
             end
           end
-        end
-
-        def edit
-          enforce_permission_to :create, :authorization, authorization: authorization
         end
 
         private

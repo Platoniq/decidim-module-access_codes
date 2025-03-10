@@ -39,14 +39,14 @@ module Decidim
         context "with invalid handler handle" do
           let(:handler_handle) { "unexisting" }
 
-          it { is_expected.to be_invalid }
+          it { is_expected.not_to be_valid }
         end
 
         context "with invalid code" do
           context "when code is not present" do
             let(:code) { nil }
 
-            it { is_expected.to be_invalid }
+            it { is_expected.not_to be_valid }
           end
 
           context "when there is no maximum count defined" do
@@ -71,7 +71,7 @@ module Decidim
             context "when code has reached maximum use count" do
               let(:times_used) { 2 }
 
-              it { is_expected.to be_invalid }
+              it { is_expected.not_to be_valid }
             end
           end
         end
