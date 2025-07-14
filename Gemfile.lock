@@ -2,9 +2,9 @@ PATH
   remote: .
   specs:
     decidim-access_codes (0.29.3)
-      decidim-admin (= 0.29.3)
-      decidim-core (= 0.29.3)
-      decidim-verifications (= 0.29.3)
+      decidim-admin (>= 0.29.0, < 0.30)
+      decidim-core (>= 0.29.0, < 0.30)
+      decidim-verifications (>= 0.29.0, < 0.30)
 
 GEM
   remote: https://rubygems.org/
