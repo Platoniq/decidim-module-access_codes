@@ -25,12 +25,12 @@ Gem::Specification.new do |s|
 
   s.require_paths = ["lib"]
 
-  s.add_dependency "decidim-admin", Decidim::AccessCodes::DECIDIM_VERSION
-  s.add_dependency "decidim-core", Decidim::AccessCodes::DECIDIM_VERSION
-  s.add_dependency "decidim-verifications", Decidim::AccessCodes::DECIDIM_VERSION
+  s.add_dependency "decidim-admin", Decidim::AccessCodes::COMPAT_DECIDIM_VERSION
+  s.add_dependency "decidim-core", Decidim::AccessCodes::COMPAT_DECIDIM_VERSION
+  s.add_dependency "decidim-verifications", Decidim::AccessCodes::COMPAT_DECIDIM_VERSION
 
   # rubocop:disable Gemspec/DevelopmentDependencies
-  s.add_development_dependency "decidim-dev", Decidim::AccessCodes::DECIDIM_VERSION
+  s.add_development_dependency "decidim-dev", Decidim::AccessCodes::COMPAT_DECIDIM_VERSION
   # rubocop:enable Gemspec/DevelopmentDependencies
   s.metadata["rubygems_mfa_required"] = "true"
 end
