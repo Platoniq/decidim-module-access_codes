@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email = %w(vera@platoniq.net ivan@platoniq.net)
   s.license = "AGPL-3.0"
   s.homepage = "https://github.com/Platoniq/decidim-module-access_codes"
-  s.required_ruby_version = ">= 3.2"
+  s.required_ruby_version = ">= 3.3.4"
 
   s.name = "decidim-access_codes"
   s.summary = "Allows admins to send access codes for user authorizations."
