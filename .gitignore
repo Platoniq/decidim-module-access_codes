@@ -18,7 +18,6 @@ development_app
 /development_app
 
 .rbenv-vars
-.vscode
 .byebug_history
 *.gem
 node_modules/

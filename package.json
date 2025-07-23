@@ -3,6 +3,7 @@
   "version": "0.8.0",
   "description": "A tool for Decidim that allows to authorize users using access codes",
   "scripts": {
+    "shakapacker-dev-server": "./bin/shakapacker-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "stylelint": "stylelint app/packs/",
     "stylelint-fix": "stylelint app/packs/ --fix"

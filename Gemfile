@@ -25,6 +25,11 @@ group :development, :test do
   gem "rubocop-faker"
 
   gem "decidim-dev", DECIDIM_VERSION
+
+  gem "debug"
+  gem "ruby-lsp", require: false
+  gem "ruby-lsp-rails", require: false
+  gem "ruby-lsp-rspec", require: false
 end
 
 group :development do
