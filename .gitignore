@@ -30,3 +30,4 @@ npm_debug.log
 # Ignore Tailwind configuration
 tailwind.config.js
 .rubocop-https
+mise.toml

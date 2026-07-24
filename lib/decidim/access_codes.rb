@@ -5,14 +5,15 @@ require_relative "access_codes/verification"
 
 module Decidim
   module AccessCodes
-    include ActiveSupport::Configurable
+    class << self
+      def config = self
 
-    config_accessor :default_maximum_use_count do
-      10
+      def configure
+        yield self
+      end
     end
 
-    config_accessor :access_code_length do
-      8
-    end
+    mattr_accessor :default_maximum_use_count, default: 10
+    mattr_accessor :access_code_length, default: 8
   end
 end
