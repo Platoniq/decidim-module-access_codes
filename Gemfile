@@ -14,6 +14,7 @@ DECIDIM_VERSION = Decidim::AccessCodes::DECIDIM_VERSION
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-access_codes", path: "."
+gem "decidim-initiatives", DECIDIM_VERSION
 
 gem "bootsnap", "~> 1.4"
 gem "puma", ">= 5.0"
