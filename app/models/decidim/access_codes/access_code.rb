@@ -46,7 +46,7 @@ module Decidim
         return if code.present?
 
         loop do
-          digest = "#{email}-#{organization.id}-#{Rails.application.secrets.secret_key_base}"
+          digest = "#{email}-#{organization.id}-#{Rails.application.secret_key_base}"
           self.code = Decidim::Tokenizer.new(length: AccessCode.length).hex_digest(digest)
           if AccessCode.find_by(code:).blank?
             save!
