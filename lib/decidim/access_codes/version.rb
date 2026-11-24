@@ -3,6 +3,6 @@
 module Decidim
   module AccessCodes
     VERSION = "0.31.0"
-    DECIDIM_VERSION = "0.31.0"
+    DECIDIM_VERSION = "0.32.3"
   end
 end
