@@ -59,7 +59,7 @@ module Decidim
           private
 
           def access_code
-            @access_code ||= AccessCode.find(params[:id])
+            @access_code ||= AccessCode.where(organization: current_organization).find(params[:id])
           end
 
           def access_codes
@@ -67,7 +67,8 @@ module Decidim
           end
 
           def paginated_authorizations
-            @paginated_authorizations ||= Decidim::Authorization.where(id: authorizations.map(&:id)).page(params[:page]).per(15)
+            # the ids come from access_code, which is already scoped to the current organization
+            @paginated_authorizations ||= Decidim::Authorization.where(id: authorizations.map(&:id)).page(params[:page]).per(15) # rubocop:disable Decidim/OrganizationScopedFinder
           end
         end
       end
