@@ -43,7 +43,8 @@ module Decidim
         private
 
         def authorization
-          @authorization ||= Decidim::Authorization.find_or_initialize_by(
+          # scoped to the signed-in user
+          @authorization ||= Decidim::Authorization.find_or_initialize_by( # rubocop:disable Decidim/OrganizationScopedFinder
             user: current_user,
             name: "access_codes"
           )
