@@ -26,7 +26,8 @@ module Decidim
           private
 
           def authorization
-            @authorization ||= Authorization.find_by(
+            # scoped through the users of the current organization (the cop only knows current_organization.<relation>)
+            @authorization ||= Authorization.where(user: current_organization.users).find_by( # rubocop:disable Decidim/OrganizationScopedFinder
               id: params[:id],
               name: "access_codes"
             )
