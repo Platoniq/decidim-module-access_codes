@@ -16,6 +16,7 @@ Decidim::Dev.dummy_app_path =
 
 require "decidim/dev/test/base_spec_helper"
 
+require_relative "support/chrome_storage_clear_fix"
 RSpec.configure do |config|
   config.before do
     Decidim::Verifications.register_workflow(:ac_verification) do |workflow|
